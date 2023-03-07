@@ -4,7 +4,7 @@ import path from "path";
 const app = express();
 
 //server static file
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../../client/dist")));
 
 // handle errors
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
@@ -13,7 +13,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public", "index.html"));
+  res.sendFile(path.join(__dirname, "../../client/dist", "index.html"));
 });
 
 app.listen(3000, () => {
