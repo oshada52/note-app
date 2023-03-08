@@ -6,7 +6,7 @@ const router = Router();
 router.get("/", (req: Request, res: Response<Note[]>) => {
   res.json([
     {
-      content: "",
+      content: "api",
       important: true,
     },
   ]);
